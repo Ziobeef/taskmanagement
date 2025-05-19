@@ -50,7 +50,7 @@
     </div>
   </div>
 </nav>
-  <div class="my-5">@yield('content')</div>
+  <div class="my-5   mx-5">@yield('content')</div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
   @include('sweetalert::alert')
 </body>
