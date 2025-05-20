@@ -16,13 +16,29 @@ class ClassController extends Controller
         ];
         return  view("Class", $data);
     }
-    public function create(Request $request){
-         $classes = new Classes();
+    public function create(Request $request)
+    {
+        $classes = new Classes();
         $classes->name = $request->name;
         $classes->save();
 
-        Alert::success('Success', 'Classes has been created');
+        Alert::success('anjay', 'data lu udah di buat');
         return back();
     }
-    
+    public function delete($id)
+    {
+        $classes = Classes::where("id", $id)->first();
+        $classes->delete();
+        Alert::success('Anjay', 'Data udah di apus');
+        return back();
+    }
+    public function update(Request $request,$id)
+    {
+        $classes = Classes::find($id);
+        $classes->name = $request->name;
+        $classes->save();
+        Alert::success('Anjay', 'Data udah di edit cuy');
+      
+        return back();
+    }
 }
