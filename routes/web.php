@@ -18,3 +18,7 @@ Route::get('/subject/delete/{id}', [SubjectController::class, 'delete']);
 Route::post('/subject/update/{id}', [SubjectController::class, 'update']);
 
 Route::get('/task', [TaskController::class, 'index']);
+Route::post('/task/create', [TaskController::class, 'create']);
+Route::get('/task/delete/{id}', [TaskController::class, 'delete']);
+Route::post('/task/update/{id}', [TaskController::class, 'update']);
+
