@@ -125,7 +125,7 @@
                     <option value="{{ $class->id }}" {{ $class->id == $data->class_id ? 'selected' : '' }}>{{ $class->name }}</option>
                     @endforeach
                 </select>
-                <select name="subject_id" class="form-select" id="subject_id" required>
+                <select name="subjects_id" class="form-select" id="subjects_id" required>
                     @foreach ($subjects as $subject)
                     <option value="{{ $subject->id }}" {{ $subject->id == $data->subject_id ? 'selected' : '' }}>{{ $subject->name }}</option>
                     @endforeach

@@ -39,21 +39,22 @@ class TaskController extends Controller
     }
     public function delete($id)
     {
-        $subject = Subject::where("id", $id)->first();
-        $subject->delete();
+        $task = Task::where("id", $id)->first();
+        $task->delete();
         Alert::success('Anjay', 'Data udah di apus');
         return back();
     }
     public function update(Request $request, $id)
     {
-        $task = Subject::find($id);
+        
+        $task = Task::where("id", $id)->first();
         $task->name = $request->name;
         $task->classes_id = $request->classes_id;
         $task->subjects_id = $request->subjects_id;
         $task->started = $request->started;
         $task->deadline = $request->deadline;
         $task->description = $request->description;
-        $task->save();
+        $task->save(); 
         Alert::success('Anjay', 'Data udah di edit cuy');
 
         return back();
